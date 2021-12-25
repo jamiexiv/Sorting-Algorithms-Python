@@ -1,10 +1,5 @@
-import random
+from RandomArrays import create_random_numbers
 
-def create_random_numbers(size_of_array):
-    numbers = []
-    for i in range(size_of_array):
-        numbers.append(random.randint(1,10000))
-    return  numbers
 
 def bubble_sort(unsorted_list):
     # Iterate through the list
@@ -15,10 +10,10 @@ def bubble_sort(unsorted_list):
                 # Swap
                 unsorted_list[j], unsorted_list[j+1] = unsorted_list[j+1], unsorted_list[j]
 
-
-
-"""When no swaps are made --> list is sorted. Previously implemented algorithm, keep evaluating the rest of list even though its already sorted
-FIX: boolean flag:  check if any swaps were made in previous iteration."""
+"""
+When no swaps are made --> list is sorted. Previously implemented algorithm, keep evaluating the rest of list even though its already sorted
+FIX: boolean flag:  check if any swaps were made in previous iteration.
+"""
 
 
 def bubble_sort_optimized(unsorted_list):
@@ -33,6 +28,10 @@ def bubble_sort_optimized(unsorted_list):
                 unsorted_list[i], unsorted_list[i+1] = unsorted_list[i+1], unsorted_list[i]
                 has_swapped = True
 
+
+# Time complexity: O(n^2)
+
+
 def main():
     unsorted = create_random_numbers(1000)
     bubble_sort(unsorted)
@@ -41,5 +40,6 @@ def main():
     unsorted = create_random_numbers(1000)
     bubble_sort_optimized(unsorted)
     print(unsorted)
+
 
 main()

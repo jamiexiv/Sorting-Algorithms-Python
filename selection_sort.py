@@ -1,7 +1,8 @@
 from RandomArrays import create_random_numbers
 
 # segments list into 2 parts: unsorted and sorted
-# continously move the smallest item from unsorted list and append to sorted list
+# continuously move the smallest item from unsorted list and append to sorted list
+# Time complexity: O(n^2)
 
 def selection_sort(nums):
     # i corresponds to how many items are sorted
@@ -15,7 +16,7 @@ def selection_sort(nums):
         nums[i], nums[lowest_value_index] = nums[lowest_value_index], nums[i]
 
 
-# Time complexity: O(n^2)
+
 
 
 def main():

@@ -2,6 +2,8 @@ from RandomArrays import create_random_numbers
 
 # Like Selection Sort, this algorithm segments the list into sorted and unsorted parts.
 # It iterates over the unsorted segment, and inserts the element being viewed into the correct position of the sorted list.
+# time complexity: O(n^2)
+
 
 def insertion_sort(nums):
     # start at the second element
@@ -14,9 +16,6 @@ def insertion_sort(nums):
             j -= 1
         # insert the item
         nums[j+1] = item_to_insert
-
-
-# time complexity: O(n^2)
 
 
 def main():

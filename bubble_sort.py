@@ -1,5 +1,7 @@
 from RandomArrays import create_random_numbers
 
+# time complexity: O(n^2)
+
 
 def bubble_sort(unsorted_list):
     # Iterate through the list
